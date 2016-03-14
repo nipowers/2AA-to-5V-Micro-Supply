@@ -1,0 +1,182 @@
+(pcb "C:\Users\npowe\Documents\KiCAD Projects\2xAA to 5V Header\2xAA to 5V Header.dsn"
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "4.0.0-rc2-stable")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0  152400 -90170  162560 -90170  162560 -86360  167640 -86360
+            172720 -86360  172720 -90170  182880 -90170  182880 -80010  182822 -79348.4
+            182650 -78706.9  182370 -78105  181989 -77561  181519 -77091.4
+            180975 -76710.4  180373 -76429.8  179732 -76257.9  179070 -76200
+            156210 -76200  155548 -76257.9  154907 -76429.8  154305 -76710.4
+            153761 -77091.4  153291 -77561  152910 -78105  152630 -78706.9
+            152458 -79348.4  152400 -80010  152400 -90170  152400 -90170)
+    )
+    (plane GND (polygon F.Cu 0  181610 -88900  179070 -88900  179070 -86360  181610 -86360
+            181610 -88900))
+    (plane Vout (polygon F.Cu 0  176530 -88900  173990 -88900  173990 -86360  176530 -86360
+            176530 -88900))
+    (plane Vin (polygon F.Cu 0  161290 -88900  158750 -88900  158750 -86360  161290 -86360
+            161290 -88900))
+    (plane GND (polygon F.Cu 0  156210 -88900  153670 -88900  153670 -86360  156210 -86360
+            156210 -88900))
+    (plane GND (polygon B.Cu 0  181610 -78740  181610 -88900  173990 -88900  173990 -85090
+            161290 -85090  161290 -88900  153670 -88900  153670 -78740  154940 -77470
+            180340 -77470  181610 -78740))
+    (keepout "" (polygon F.Cu 0  182880 -90170  172720 -90170  172720 -86360  162560 -86360
+            162560 -90170  152400 -90170  152400 -76200  182880 -76200  182880 -90170)
+      (window (polygon F.Cu 0  154940 -77470  153670 -78740  153670 -88900  161290 -88900
+            161290 -85090  173990 -85090  173990 -88900  181610 -88900  181610 -78740
+            180340 -77470  154940 -77470))
+    )
+    (via "Via[0-1]_600:400_um")
+    (rule
+      (width 250)
+      (clearance 200.1)
+      (clearance 200.1 (type default_smd))
+      (clearance 50 (type smd_smd))
+    )
+  )
+  (placement
+    (component Capacitors_SMD:C_0805_HandSoldering
+      (place C1 162560 -82550 front 270 (PN 10uF))
+      (place C2 172720 -82550 front 90 (PN 22uF))
+      (place L1 157480 -82550 front 90 (PN 2.5uH))
+    )
+    (component Diodes_SMD:POWERMITE2
+      (place D1 167640 -78740 front 180 (PN D))
+    )
+    (component Resistors_SMD:R_0805_HandSoldering
+      (place R1 176530 -82550 front 90 (PN 95.3k))
+      (place R2 179070 -82550 front 270 (PN 30.9K))
+    )
+    (component "TO_SOT_Packages_SMD:SOT-23-6"
+      (place U1 167640 -82550 front 0 (PN LTC3426))
+    )
+  )
+  (library
+    (image Capacitors_SMD:C_0805_HandSoldering
+      (outline (path signal 50  -2300 1000  2300 1000))
+      (outline (path signal 50  -2300 -1000  2300 -1000))
+      (outline (path signal 50  -2300 1000  -2300 -1000))
+      (outline (path signal 50  2300 1000  2300 -1000))
+      (outline (path signal 150  500 850  -500 850))
+      (outline (path signal 150  -500 -850  500 -850))
+      (pin Rect[T]Pad_1500x1250_um 1 -1250 0)
+      (pin Rect[T]Pad_1500x1250_um 2 1250 0)
+    )
+    (image Diodes_SMD:POWERMITE2
+      (outline (path signal 30  -2794 1778  2794 1778))
+      (outline (path signal 30  2794 1778  2794 -1778))
+      (outline (path signal 30  2794 -1778  -2794 -1778))
+      (outline (path signal 30  -2794 -1778  -2794 1778))
+      (outline (path signal 150  -2540 1524  2540 1524))
+      (outline (path signal 150  2540 1524  2540 -1524))
+      (outline (path signal 150  2540 -1524  -2540 -1524))
+      (outline (path signal 150  -2540 -1524  -2540 1524))
+      (pin Rect[T]Pad_635x1270_um (rotate 180) 2 1714.5 0)
+      (pin Rect[T]Pad_2670x2540_um (rotate 180) 1 -636.5 0)
+    )
+    (image Resistors_SMD:R_0805_HandSoldering
+      (outline (path signal 50  -2400 1000  2400 1000))
+      (outline (path signal 50  -2400 -1000  2400 -1000))
+      (outline (path signal 50  -2400 1000  -2400 -1000))
+      (outline (path signal 50  2400 1000  2400 -1000))
+      (outline (path signal 150  600 -875  -600 -875))
+      (outline (path signal 150  -600 875  600 875))
+      (pin Rect[T]Pad_1500x1300_um 1 -1350 0)
+      (pin Rect[T]Pad_1500x1300_um 2 1350 0)
+    )
+    (image "TO_SOT_Packages_SMD:SOT-23-6"
+      (outline (path signal 150  -300 1700  -304.894 1669.1  -319.098 1641.22  -341.221 1619.1
+            -369.098 1604.89  -400 1600  -430.902 1604.89  -458.779 1619.1
+            -480.902 1641.22  -495.106 1669.1  -500 1700  -495.106 1730.9
+            -480.902 1758.78  -458.779 1780.9  -430.902 1795.11  -400 1800
+            -369.098 1795.11  -341.221 1780.9  -319.098 1758.78  -304.894 1730.9))
+      (outline (path signal 150  250 1450  -250 1450))
+      (outline (path signal 150  250 -1450  250 1450))
+      (outline (path signal 150  -250 -1450  250 -1450))
+      (outline (path signal 150  -250 1450  -250 -1450))
+      (pin Rect[T]Pad_1060x650_um 1 -1100 950)
+      (pin Rect[T]Pad_1060x650_um 2 -1100 0)
+      (pin Rect[T]Pad_1060x650_um 3 -1100 -950)
+      (pin Rect[T]Pad_1060x650_um 4 1100 -950)
+      (pin Rect[T]Pad_1060x650_um 6 1100 950)
+      (pin Rect[T]Pad_1060x650_um 5 1100 0)
+    )
+    (padstack Rect[T]Pad_2670x2540_um
+      (shape (rect F.Cu -1335 -1270 1335 1270))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_635x1270_um
+      (shape (rect F.Cu -317.5 -635 317.5 635))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1060x650_um
+      (shape (rect F.Cu -530 -325 530 325))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1500x1250_um
+      (shape (rect F.Cu -750 -625 750 625))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1500x1300_um
+      (shape (rect F.Cu -750 -650 750 650))
+      (attach off)
+    )
+    (padstack "Via[0-1]_600:400_um"
+      (shape (circle F.Cu 600))
+      (shape (circle B.Cu 600))
+      (attach off)
+    )
+  )
+  (network
+    (net Vin
+      (pins C1-1 D1-2 L1-1 U1-1)
+    )
+    (net GND
+      (pins C1-2 C2-2 R1-2 R2-2 U1-2)
+    )
+    (net Vout
+      (pins C2-1 D1-1 R2-1 U1-5)
+    )
+    (net "Net-(L1-Pad2)"
+      (pins L1-2 U1-6)
+    )
+    (net "Net-(R1-Pad1)"
+      (pins R1-1 U1-3)
+    )
+    (net "Net-(U1-Pad4)"
+      (pins U1-4)
+    )
+    (class kicad_default "" GND "Net-(L1-Pad2)" "Net-(R1-Pad1)" "Net-(U1-Pad4)"
+      Vin Vout
+      (circuit
+        (use_via Via[0-1]_600:400_um)
+      )
+      (rule
+        (width 250)
+        (clearance 200.1)
+      )
+    )
+  )
+  (wiring
+  )
+)
