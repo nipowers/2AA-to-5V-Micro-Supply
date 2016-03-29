@@ -157,12 +157,12 @@ F 4 "CL21A226MQQNNNG " H 6550 3650 60  0001 C CNN "Part Number"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6000 3800 7400 3800
+	6000 3800 7650 3800
 Wire Wire Line
 	6000 3700 6000 3800
 Connection ~ 5600 3700
 Wire Wire Line
-	7000 2400 7200 2400
+	7000 2400 7650 2400
 Connection ~ 6550 3000
 Wire Wire Line
 	4800 2150 6700 2150
@@ -187,7 +187,7 @@ Vin
 Wire Wire Line
 	4000 2300 6350 2300
 Wire Wire Line
-	7200 2400 7200 3000
+	7200 3000 7200 2400
 Text Label 7200 2550 0    60   ~ 0
 Vout
 Connection ~ 4800 2650
@@ -250,4 +250,21 @@ Wire Wire Line
 	7400 3800 7400 3350
 Wire Wire Line
 	7400 3350 7300 3350
+$Comp
+L CONN_01X02 P1
+U 1 1 56FA9DBF
+P 7850 3250
+F 0 "P1" H 7850 3400 50  0000 C CNN
+F 1 "CONN_01X02" V 7950 3250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 7850 3250 50  0001 C CNN
+F 3 "" H 7850 3250 50  0000 C CNN
+	1    7850 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2400 7650 3200
+Connection ~ 7200 2400
+Wire Wire Line
+	7650 3800 7650 3300
+Connection ~ 7400 3800
 $EndSCHEMATC
