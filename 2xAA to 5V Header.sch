@@ -91,10 +91,6 @@ F 3 "" H 5600 3700 60  0000 C CNN
 	1    5600 3700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4850 3000 4600 3000
-Wire Wire Line
-	4600 3000 4600 3700
 $Comp
 L R R1
 U 1 1 565F355C
@@ -119,14 +115,6 @@ F 4 "ERJ-6ENF95R3V" V 5600 3500 60  0001 C CNN "Part Number"
 	1    5600 3500
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	4600 3700 6000 3700
-Wire Wire Line
-	5750 3500 6550 3500
-Wire Wire Line
-	6550 3500 6550 3000
-Wire Wire Line
-	6350 3000 7200 3000
 $Comp
 L C C1
 U 1 1 565F3671
@@ -139,11 +127,6 @@ F 4 "CL21A106KQFNNNG" H 4350 3050 60  0001 C CNN "Part Number"
 	1    4350 3050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4350 3200 4350 3350
-Wire Wire Line
-	4350 3350 4600 3350
-Connection ~ 4600 3350
 $Comp
 L C C2
 U 1 1 565F36D9
@@ -156,13 +139,62 @@ F 4 "CL21A226MQQNNNG " H 6550 3650 60  0001 C CNN "Part Number"
 	1    6550 3650
 	1    0    0    -1  
 $EndComp
+Text Label 4800 2750 0    60   ~ 0
+SW
+Text Label 5750 3700 0    60   ~ 0
+GND
+Text Label 4850 3200 0    60   ~ 0
+FB
+Text Label 4550 2300 0    60   ~ 0
+Vin
+Text Label 7200 2550 0    60   ~ 0
+Vout
+$Comp
+L R R3
+U 1 1 565F61F2
+P 6450 2650
+F 0 "R3" V 6530 2650 50  0000 C CNN
+F 1 "1M" V 6450 2650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6380 2650 30  0001 C CNN
+F 3 "" H 6450 2650 30  0000 C CNN
+F 4 "RC2012J105CS" V 6450 2650 60  0001 C CNN "Part Number"
+	1    6450 2650
+	1    0    0    -1  
+$EndComp
+Text Label 6400 3100 3    60   ~ 0
+SHDN
+$Comp
+L Switch_SPDT_x2 SW1
+U 1 1 56C25443
+P 7000 3250
+F 0 "SW1" H 6800 3400 50  0000 C CNN
+F 1 "SPDT" H 6750 3100 50  0000 C CNN
+F 2 ".pretty:JS102011SAQN" H 7000 3250 50  0001 C CNN
+F 3 "" H 7000 3250 50  0000 C CNN
+F 4 "JS102011SAQN" H 7000 3250 60  0001 C CNN "Part Number"
+	1    7000 3250
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	6000 3800 7650 3800
+	4850 3000 4600 3000
+Wire Wire Line
+	4600 3000 4600 3700
+Wire Wire Line
+	4600 3700 6000 3700
+Wire Wire Line
+	5750 3500 6550 3500
+Wire Wire Line
+	6550 3500 6550 3000
+Wire Wire Line
+	6350 3000 7200 3000
+Wire Wire Line
+	4350 3200 4350 3350
+Wire Wire Line
+	4350 3350 4600 3350
+Connection ~ 4600 3350
 Wire Wire Line
 	6000 3700 6000 3800
 Connection ~ 5600 3700
-Wire Wire Line
-	7000 2400 7650 2400
 Connection ~ 6550 3000
 Wire Wire Line
 	4800 2150 6700 2150
@@ -176,45 +208,21 @@ Wire Wire Line
 	4800 2900 4850 2900
 Wire Wire Line
 	6350 2300 6350 2900
-Text Label 4800 2750 0    60   ~ 0
-SW
-Text Label 5750 3700 0    60   ~ 0
-GND
-Text Label 4850 3200 0    60   ~ 0
-FB
-Text Label 4550 2300 0    60   ~ 0
-Vin
 Wire Wire Line
 	4000 2300 6350 2300
 Wire Wire Line
 	7200 3000 7200 2400
-Text Label 7200 2550 0    60   ~ 0
-Vout
 Connection ~ 4800 2650
 Connection ~ 4000 2650
 Wire Wire Line
 	4000 2650 4200 2650
 Wire Wire Line
 	4800 2150 4800 2900
-$Comp
-L R R3
-U 1 1 565F61F2
-P 6450 2650
-F 0 "R3" V 6530 2650 50  0000 C CNN
-F 1 "1M" V 6450 2650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 6380 2650 30  0001 C CNN
-F 3 "" H 6450 2650 30  0000 C CNN
-F 4 "RC2012J105CS" V 6450 2650 60  0001 C CNN "Part Number"
-	1    6450 2650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6350 2500 6450 2500
 Connection ~ 6350 2500
 Wire Wire Line
 	6350 3100 6700 3100
-Text Label 6400 3100 3    60   ~ 0
-SHDN
 Wire Wire Line
 	4850 3100 4850 3350
 Wire Wire Line
@@ -234,22 +242,16 @@ Wire Wire Line
 Wire Wire Line
 	7300 2800 6450 2800
 Connection ~ 6550 3800
-$Comp
-L Switch_SPDT_x2 SW1
-U 1 1 56C25443
-P 7000 3250
-F 0 "SW1" H 6800 3400 50  0000 C CNN
-F 1 "SPDT" H 6750 3100 50  0000 C CNN
-F 2 ".pretty:JS102011SAQN" H 7000 3250 50  0001 C CNN
-F 3 "" H 7000 3250 50  0000 C CNN
-F 4 "JS102011SAQN" H 7000 3250 60  0001 C CNN "Part Number"
-	1    7000 3250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7400 3800 7400 3350
 Wire Wire Line
 	7400 3350 7300 3350
+Connection ~ 7200 2400
+Connection ~ 7400 3800
+Wire Wire Line
+	6000 3800 7650 3800
+Wire Wire Line
+	7650 3800 7650 3300
 $Comp
 L CONN_01X02 P1
 U 1 1 56FA9DBF
@@ -262,9 +264,7 @@ F 3 "" H 7850 3250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7650 2400 7650 3200
-Connection ~ 7200 2400
+	7000 2400 7650 2400
 Wire Wire Line
-	7650 3800 7650 3300
-Connection ~ 7400 3800
+	7650 2400 7650 3200
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=3/13/2016 8:15:54 PM
+update=3/30/2016 12:05:01 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -57,5 +57,15 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=C:/Users/Nick Powers/Downloads/LTC3426
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [general]
 version=1
